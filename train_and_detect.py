@@ -199,7 +199,7 @@ face_classifier = cv2.CascadeClassifier('./Haarcascades/haarcascade_frontalface_
 def face_detector(img):
     gray = cv2.cvtColor(img,cv2.COLOR_BGR2GRAY)
     faces = face_classifier.detectMultiScale(gray, 1.3, 5)
-    if face is ():
+    if faces is ():
         return (0,0,0,0), np.zeros((48,48), np.uint8), img
     for(x,y,w,h) in faces:
         x = x - 50
